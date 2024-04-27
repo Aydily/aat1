@@ -253,16 +253,19 @@ function mostrarResultados() {
 
             if(pregunta.rS == pregunta.respuesta){
             var respuestaElement = document.createElement('h3');
-                    respuestaElement.textContent = preguntas[key].respuesta + " Check";
-                    rDiv.appendChild(respuestaElement)
+            respuestaElement.textContent = preguntas[key].respuesta;
+            rDiv.appendChild(respuestaElement)
+            respuestaElement.style.color = "green";
                 } 
                 else{
                     var respuestaCorrecta = document.createElement('h3');
                     respuestaCorrecta.textContent= "Respuesta correcta: " + preguntas[key].respuesta;
                     rDiv.appendChild(respuestaCorrecta);
+                    respuestaCorrecta.style.color = "green";
                     var respuestaIncorrecta= document.createElement('h3');
                     respuestaIncorrecta.textContent = "Respuesta incorrecta: "+ preguntas[key].rS;
-                    rDiv.appendChild(respuestaIncorrecta)
+                    rDiv.appendChild(respuestaIncorrecta);
+                    respuestaIncorrecta.style.color = "red";
                 }
             // Iterar sobre las respuestas
            // for (var i = 1; i <= 3; i++) {
