@@ -278,6 +278,12 @@ function mostrarResultados() {
            //}
         }
     }
+    var btnIniciar = document.createElement('button');
+    btnIniciar.textContent = "Intentar nuevamente";
+    rDiv.appendChild(btnIniciar);
+    btnIniciar.id = "reloadButton";
+    reloadButton.addEventListener("click", function() {
+        location.reload(); });
 }
 
 
